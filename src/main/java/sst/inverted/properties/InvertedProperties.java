@@ -20,6 +20,10 @@ public class InvertedProperties {
     private final FileBasedConfigurationBuilder<PropertiesConfiguration> builder;
     private final PropertiesConfiguration config;
 
+    public Set<String> keys() {
+        return mapping.keySet();
+    }
+
     public InvertedProperties(String filename) throws ConfigurationException {
         this.filename = filename;
         Configurations configs = new Configurations();
@@ -62,6 +66,10 @@ public class InvertedProperties {
             throw new ConfigurationException(String.format("Cannot backup <%s>", filename), e);
         }
         save();
+    }
+
+    public int size() {
+        return config.size();
     }
 
     private void backup() throws IOException {
