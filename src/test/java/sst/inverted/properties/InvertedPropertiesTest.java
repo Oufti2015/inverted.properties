@@ -1,11 +1,10 @@
-package test.sst.inverted.properties;
+package sst.inverted.properties;
 
 import org.apache.commons.configuration2.ex.ConfigurationException;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import sst.inverted.properties.InvertedProperties;
 
 import java.io.File;
 import java.io.FileInputStream;
